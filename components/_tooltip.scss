@@ -1,0 +1,53 @@
+/* gtris-tooltip */
+.gt-tooltip {
+	position: relative;
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+
+	.gt-tt-wrap {
+		position: absolute;
+		padding: $tooltip-wrap-padding;
+		width: $tooltip-wrap-width;
+		background: $tooltip-wrap-bgColor;
+		color: $tooltip-wrap-color;
+		border-radius: $tooltip-wrap-radius;
+		text-align: center;
+		z-index: 1000;
+
+		.gt-tt-close {
+			position: absolute;
+			top: $tooltip-close-top;
+			right: $tooltip-close-right;
+		}
+	}
+
+	&[data-placement="left"] {
+		.gt-triangle {
+			position: absolute;
+			@include triangle($tooltip-triangle-size, $tooltip-wrap-bgColor, right);
+		}
+	}
+
+	&[data-placement="right"] {
+		.gt-triangle {
+			position: absolute;
+			@include triangle($tooltip-triangle-size, $tooltip-wrap-bgColor, left);
+		}
+	}
+
+	&[data-placement="bottom"] {
+		.gt-triangle {
+			position: absolute;
+			@include triangle($tooltip-triangle-size, $tooltip-wrap-bgColor, up);
+		}
+	}
+
+	&[data-placement="top"] {
+		.gt-triangle {
+			position: absolute;
+			@include triangle($tooltip-triangle-size, $tooltip-wrap-bgColor, down);
+		}
+	}
+	
+}

@@ -1,0 +1,33 @@
+/*gtis-tab*/
+.gt-tab .gt-tab-nav { 
+	@include clearfix();
+	> li {
+		float: left;
+		border: 1px solid $tab-borderColor;
+		background: $tab-bgColor;
+		text-align: center;
+	}
+
+	> li + li { 
+		margin: 0 0 0 -1px
+	}
+
+	> li a { 
+		display: block;
+		padding: $tab-padding;
+		color: $tab-color;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	> li.gt-active { 
+		position: relative;
+		border: 1px solid $tab-active-borderColor;
+		background: $tab-active-bgColor;
+		z-index: 1;
+	}
+
+	> li.gt-active a {
+		color: $tab-active-color;
+	}
+}

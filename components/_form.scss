@@ -1,0 +1,142 @@
+/*checkbox, radio*/
+.gt-chk-item {
+	display:inline-block;
+	position:relative;
+	margin:0 15px 0 0;
+	.gt-chkbox,
+	.gt-radio,
+	.gt-label {
+		cursor: pointer;
+		vertical-align:middle;
+	}	
+	.gt-chkbox {
+		&:not(.crossbrowsing) {
+			position:absolute;
+			top:0;
+			left:0;
+			border:0 none;
+			opacity:.01;
+			&:disabled {cursor:not-allowed;}
+			& + .gt-label {
+				min-height:$chkform-label-minHeight;
+				padding-left:$chkform-label-paddingLeft;
+				@include sprite($chkform-bg-url);
+				background-position: $chkbox-bgPosition;
+			}
+			&:focus + .gt-label,
+			&:hover + .gt-label,
+			& + .gt-label:hover {
+				background-position:$chkbox-focus-bgPosition;
+			}
+			&:checked + .gt-label {
+				background-position:$chkbox-checked-bgPosition;
+			}
+			&:disabled + .gt-label {
+				background-position:$chkbox-disabled-bgPosition;
+				cursor: not-allowed;
+			}
+		}
+	}
+	.gt-radio {
+		&:not(.crossbrowsing) {
+			position:absolute;
+			top:0;
+			left:0;
+			border:0 none;
+			opacity:.01;			
+			&:disabled {cursor:not-allowed;}
+			& + .gt-label {
+				min-height:$chkform-label-minHeight;
+				padding-left:$chkform-label-paddingLeft;
+				@include sprite($chkform-bg-url);
+				background-position:$radio-bgPosition;
+			}
+			&:focus + .gt-label,
+			&:hover + .gt-label,
+			& + .gt-label:hover {
+				background-position:$radio-focus-bgPosition;
+			}
+			&:checked + .gt-label {
+				background-position:$radio-checked-bgPosition;
+			}
+			&:disabled + .gt-label {
+				background-position:$radio-disabled-bgPosition;
+				cursor: not-allowed;
+			}
+		}
+	}
+}
+
+/*textbox*/
+.gt-textbox {	
+	border-radius:$textbox-borderRadius;
+	padding:$textbox-padding;
+	height:$textbox-height;
+	line-height:$textbox-lineHeight;
+	border:1px solid $textbox-borderColor;
+	background-color:$textbox-bgColor;
+	&:focus {
+		border-color:$textbox-focus-borderColor;
+		background-color:$textbox-focus-bgColor;
+	}
+	&:read-only {
+		border-color:$textbox-readonly-borderColor;
+		background-color:$textbox-readonly-bgColor;
+		color:$textbox-readonly-fontColor;
+	}
+	&:-moz-read-only {
+		border-color:$textbox-readonly-borderColor;
+		background-color:$textbox-readonly-bgColor;
+		color:$textbox-readonly-fontColor;
+	}
+	&[readonly] {
+		border-color:$textbox-readonly-borderColor;
+		background-color:$textbox-readonly-bgColor;
+		color:$textbox-readonly-fontColor;
+	}
+	&:disabled {
+		border-color:$textbox-disabled-borderColor;
+		background-color:$textbox-disabled-bgColor;
+		color:$textbox-disabled-fontColor;
+		cursor: not-allowed;
+	}
+	&.gt-multiline {
+		padding:$textbox-multiline-padding;
+		min-width:$textbox-multiline-minWidth;
+		max-width:$textbox-multiline-maxWidth;
+		min-height:$textbox-multiline-minHeight;
+		overflow:auto;
+		line-height:1.5;
+	}
+}
+
+/*select*/
+.gt-select {
+	padding:$select-padding;
+	height:$select-height;
+	line-height:$select-lineHeight;
+	border:1px solid $select-borderColor;
+	min-width: 120px;
+	border-radius:$select-borderRadius;
+	appearance:none;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	-ms-appearance:none;
+	&::-ms-expand {display:none;}
+	background:$select-bgColor url($select-bgDefault-url) right center/$select-bgW $select-bgH no-repeat;
+//	@include selectBackground($select-bgDefault-url, $select-bgW, $select-bgH, $select-bgColor);
+	option {
+		padding:$select-padding;
+	}
+	&:focus {
+		border-color:$select-focus-borderColor;
+	}
+	&:disabled {
+		background-color:$select-disabled-bgColor;
+		border-color:$select-disabled-borderColor;
+		color:$select-disabled-fontColor;
+		cursor: not-allowed;
+		background:$select-bgColor url($select-bgDisabled-url) right center/$select-bgW $select-bgH no-repeat;
+//		@include selectBackground($select-bgDisabled-url, $select-bgW, $select-bgH, $select-bgColor);
+	}
+}

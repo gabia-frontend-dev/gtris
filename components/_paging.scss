@@ -1,0 +1,48 @@
+/*gtis-paging*/
+.gt-paging {
+	text-align: center;
+	line-height: normal;
+
+	> .gt-paging-inner {
+		overflow: hidden;
+		display: inline-block;
+		margin: 0 auto;
+
+		> .gt-paging-num,
+		> .gt-paging-nav { 
+			float: left;
+			font-size: $paging-fontSize;
+			color: $paging-color;
+			min-width: $paging-minWidth;
+			line-height: $paging-lineHeight;
+			@include transition-duration($paging-transition-duration);
+		}
+	
+		> em.gt-paging-num,
+		> em.gt-paging-num:hover {
+			color: $paging-active-color;
+			background-color: $paging-active-bgColor;
+		}
+
+		> .gt-paging-num:hover, .gt-paging-num:active {
+			color: $paging-hover-color;
+			background-color: $paging-hover-bgColor;
+		}
+
+		> .gt-paging-nav:hover, .gt-paging-nav:active {
+			background-color: $paging-hover-bgColor;
+		}
+
+		.gt-paging-disabled,
+		.gt-paging-disabled:hover,
+		.gt-paging-disabled:focus,
+		.gt-paging-disabled:active {
+	        cursor: not-allowed;
+	        background-color: $paging-disabled-bgColor;
+	        @include opacity(0.2);
+		}
+
+
+
+	}
+}

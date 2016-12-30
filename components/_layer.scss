@@ -1,0 +1,40 @@
+/* gtris-layer */
+.gt-layer {
+	position: relative;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+
+	.gt-layer-wrap {
+		z-index: 1000;
+		position: absolute;
+		width: $layer-wrap-width;
+		background: $layer-wrap-bgColor;
+	}
+
+	.gt-layer-header {
+		padding: $layer-header-padding;
+		font-size: $layer-header-fontSize;
+		color: $layer-header-color;
+		background: $layer-header-bgColor;
+		font-weight: bold;
+	}
+
+	.gt-layer-body {
+		padding: $layer-body-padding;
+		max-height: $layer-body-maxHeight;
+		color: $layer-body-color;
+		border-left: 1px solid $layer-body-borderColor;
+		border-right: 1px solid $layer-body-borderColor;
+		border-bottom: 1px solid $layer-body-borderColor;
+		overflow-y: auto;
+		font-weight: normal;
+	}
+
+	.gt-layer-close {
+		position: absolute;
+		top: $layer-close-top;
+		right: $layer-close-right;
+	}
+
+}

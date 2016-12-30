@@ -1,0 +1,173 @@
+//Sprite
+$sprite-img-url: 'bla.png' !default;
+
+// Table
+$table-th-padding: 15px 0 !default;
+$table-td-padding: 10px 0 !default;
+$table-th-bgColor: #fff !default;
+$table-td-bgColor: #fff !default;
+$table-border-color: #e0e0e0 !default;
+$table-hover-bgColor: #f5f5f5 !default;
+$table-striped-bgColor: #f5f5f5 !default;
+$table-th-align: center !default;
+$table-td-align: center !default;
+
+// Paging
+$paging-fontSize: 12px !default;
+$paging-minWidth: 30px !default;
+$paging-lineHeight: 30px !default;
+$paging-color: #000 !default;
+$paging-hover-color: #000 !default;
+$paging-hover-bgColor: #f4f4f4 !default;
+$paging-active-color: #fff !default;
+$paging-active-bgColor: #1f8dd6 !default;
+$paging-disabled-bgColor: #fff !default;
+$paging-transition-duration: 0s !default;
+
+// Button
+$button-color: #fff !default;
+$button-height: 40px !default;
+$button-fontsize: 16px !default;
+$button-padding: 0 12px !default;
+$button-bgColor: #2985db !default;
+$button-borderColor: #2985db !default;
+$button-borderRadius: 2px !default;
+$button-letterSpacing: 1.5px !default;
+$button-hover-color: #fff !default;
+$button-hover-bgColor: #606c76 !default;
+$button-hover-borderColor: #999 !default;
+$button-outline-color: #2985db !default;
+$button-outline-borderColor: #ccc !default;
+$button-outline-hover-color: #606c76 !default;
+$button-outline-hover-borderColor: #2985db !default;
+$button-disabled-color: #666 !default;
+$button-disabled-bgColor: #e6e6e6 !default;
+$button-disabled-borderColor: #bfbfbf !default;
+
+// Tab
+$tab-color: #767676 !default;
+$tab-padding: 9px 20px !default;
+$tab-bgColor: #fff !default;
+$tab-borderColor: #bfbdbe !default;
+$tab-active-color: #fff !default;
+$tab-active-bgColor: #2985db !default;
+$tab-active-borderColor: #ccc !default;
+
+// Collapse
+$collapse-header-color: #333 !default;
+$collapse-header-padding: 20px !default;
+$collapse-content-padding: 30px !default;
+$collapse-active-header-color: #fff !default;
+$collapse-active-header-bgColor: #2985db !default;
+$collapse-active-content-color: #333 !default;
+$collapse-active-content-bgColor: #ebf0fb !default;
+$collapse-arrow-fontSize: 20px !default;
+$collapse-arrow-top: 14px !default;
+$collapse-arrow-right: 20px !default;
+
+// Tooltip
+$tooltip-wrap-width: 200px !default;
+$tooltip-wrap-padding: 6px 20px !default;
+$tooltip-wrap-radius: 2px !default;
+$tooltip-wrap-bgColor: #7368b0 !default;
+$tooltip-wrap-color: #fff !default;
+$tooltip-header-fontSize: 16px !default;
+$tooltip-close-top: 10px !default;
+$tooltip-close-right: 10px !default;
+$tooltip-triangle-size: 12px !default;
+
+// Modal
+$modal-width: 650px !default;
+$modal-bgColor: #fff !default;
+$modal-header-padding: 12px 24px !default;
+$modal-header-fontSize: 14px !default;
+$modal-header-color: #fff !default;
+$modal-header-bgColor: #2598e7 !default;
+$modal-body-padding: 30px !default;
+$modal-body-maxHeight: 500px !default;
+$modal-body-color: #666 !default;
+$modal-close-color: #fff !default;
+$modal-close-fontSize: 28px !default;
+$modal-close-top: 12px !default;
+$modal-close-right: 12px !default;
+
+// Layer
+$layer-wrap-width: 650px !default;
+$layer-wrap-bgColor: #fff !default;
+$layer-header-padding: 12px 24px !default;
+$layer-header-fontSize: 14px !default;
+$layer-header-color: #fff !default;
+$layer-header-bgColor: #2598e7 !default;
+$layer-body-padding: 30px !default;
+$layer-body-borderColor: #ccc !default;
+$layer-body-maxHeight: 450px !default;
+$layer-body-color: #666 !default;
+$layer-close-top: 12px !default;
+$layer-close-right: 12px !default;
+
+//Progress
+$progress-height: 20px !default;
+$progress-bgColor: #f5f5f5 !default;
+$progress-active-bgColor: #2985db !default;
+$progress-active-fontSize: 12px !default;
+$progress-active-color: #fff !default;
+$progress-active-lineHeight: 20px !default;
+$progress-striped-color: rgba(255,255,255,.15) !default;
+$progress-striped-deg: 45deg !default;
+$progress-striped-bgSize: 40px 40px !default;
+$progress-border-radius: 4px !default;
+
+// Checkbox, Radio
+
+$chkform-label-minHeight: 20px !default;
+
+$chkform-lineHeight: 20px !default;
+$chkform-label-paddingLeft: 25px !default;
+$chkform-bg-url: '../images/spr-chkfrm.png' !default;
+
+$chkbox-bgPosition: 0 0 !default;
+$chkbox-checked-bgPosition: 0 -24px !default;
+$chkbox-disabled-bgPosition: 0 -48px !default;
+$chkbox-focus-bgPosition: 0 -72px !default;
+
+$radio-bgPosition: 0 -96px !default;
+$radio-checked-bgPosition: 0 -122px !default;
+$radio-disabled-bgPosition: 0 -148px !default;
+$radio-focus-bgPosition: 0 -174px !default;
+
+// Textbox
+$textbox-borderRadius: 1px !default;
+$textbox-padding: 0 0 0 12px !default;
+$textbox-height: 22px !default;
+$textbox-lineHeight: 22px !default;
+$textbox-borderColor: #b7b7b7 !default;
+$textbox-bgColor: #fff !default;
+$textbox-focus-borderColor: #3073ce !default;
+$textbox-focus-bgColor: #fff !default;
+$textbox-focus-fontColor: #a6a6a6 !default;
+$textbox-readonly-borderColor: #e1e1e1 !default;
+$textbox-readonly-bgColor: #fff !default;
+$textbox-readonly-fontColor: #a6a6a6 !default;
+$textbox-disabled-borderColor: #eaeeef !default;
+$textbox-disabled-bgColor: #f8fafb !default;
+$textbox-disabled-fontColor: #ced3d6 !default;
+$textbox-multiline-padding: 10px !default;
+$textbox-multiline-minWidth: 376px !default;
+$textbox-multiline-maxWidth: 376px !default;
+$textbox-multiline-minHeight: 100px !default;
+
+// Select
+$select-bgDefault-url: '../images/select_bg.png' !default;
+$select-bgDisabled-url: '../images/select_bg_disabled.png' !default;
+$select-bgColor: #fff !default;
+$select-bgW: 18px !default;
+$select-bgH: 28px !default;
+$select-padding: 0 0 0 12px !default;
+$select-height: 24px !default;
+$select-lineHeight: 24px !default;
+$select-borderRadius: 1px !default;
+$select-borderColor: #b7b7b7 !default;
+$select-focus-borderColor: #3073ce !default;
+$select-disabled-borderColor: #e1e1e1 !default;
+$select-disabled-bgColor: #fff !default;
+$select-disabled-fontColor: #a6a6a6 !default;

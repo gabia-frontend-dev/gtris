@@ -1,0 +1,41 @@
+/* gtris-collapse */
+.gt-collapse {
+    
+    .gt-collapse-item {
+
+        .gt-collapse-header {
+            display: block;
+            position: relative;
+            font-weight: bold;
+            cursor: pointer;
+            padding: $collapse-header-padding;
+            color: $collapse-header-color ;
+
+            .gt-collapse-arrow {
+                position: absolute;
+                top: $collapse-arrow-top;
+                right: $collapse-arrow-right;
+                font-size: $collapse-arrow-fontSize;
+            }
+        }
+
+        .gt-collapse-content {
+            padding: $collapse-content-padding ;   
+        }
+
+        &.gt-active .gt-collapse-header {
+            color: $collapse-active-header-color;
+            background: $collapse-active-header-bgColor;
+
+            .gt-collapse-arrow {
+                @include rotate(180deg);
+            }
+        }
+        
+        &.gt-active .gt-collapse-content {
+            color: $collapse-active-content-color;
+            background: $collapse-active-content-bgColor;
+        }
+    }
+
+}

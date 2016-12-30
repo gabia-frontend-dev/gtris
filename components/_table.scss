@@ -1,0 +1,56 @@
+/*gtis-table*/
+.gt-table {
+	width: 100%;
+	max-width: 100%;
+	border-bottom: 1px solid $table-border-color;
+	
+	//Base
+	> thead,
+	> tbody {
+		> tr {
+			> th,
+			> td {
+				border-top: 1px solid $table-border-color;
+			}
+			> th {
+				padding: $table-th-padding;
+				text-align: $table-th-align;
+				background: $table-th-bgColor;
+			}
+
+			> td {
+				padding: $table-td-padding;
+				text-align: $table-td-align;
+				background: $table-td-bgColor;
+			}
+		}
+	}
+
+	//Borderd Table
+	&.gt-table-borderd {
+		> thead,
+		> tbody {
+			> tr {
+				> th,
+				> td {
+					border: 1px solid $table-border-color;
+				}
+			}
+		}
+	}
+
+	//Hover Table
+	&.gt-table-hover {
+		> tbody > tr:hover td {
+			background-color: $table-hover-bgColor;
+		}
+	}
+
+	//Striped Table
+	&.gt-table-striped {
+		> tbody > tr:nth-of-type(odd) td {
+			background-color: $table-striped-bgColor;
+		}
+	}
+	
+}

@@ -1,0 +1,4 @@
+@mixin sprite($url) {
+    display: inline-block;
+    background: url($url) 0 0 no-repeat;
+}
