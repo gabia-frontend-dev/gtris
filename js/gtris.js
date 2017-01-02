@@ -197,7 +197,9 @@ var Gtris = Gtris || (function() {
         var isExpandable = false;
 
         //set expandable
-        if(_obj.expandable == true || _obj.expandable == 'true') isExpandable = true;
+        if(_obj.expandable == true || _obj.expandable == 'true') {
+            isExpandable = true;
+        }
 
         //set slide time
         if(_obj.slideTime) {
