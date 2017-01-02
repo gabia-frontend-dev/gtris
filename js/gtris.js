@@ -13,7 +13,7 @@ var Gtris = Gtris || (function() {
 
     /* ========================================================================
      * Gtris: modal v1.1.0
-     * http://static.gabia.com/gtris/modal.html
+     * http://static.gabia.com/gtris/1.1.0/modal.html
      * ========================================================================
      */
     var gtModalWrapArr = [];
@@ -184,7 +184,7 @@ var Gtris = Gtris || (function() {
 
     /* ========================================================================
      * Gtris: collapse v1.1.0
-     * http://static.gabia.com/gtris/collapse.html
+     * http://static.gabia.com/gtris/1.1.0/collapse.html
      * ========================================================================
      */
      var Collapse = function(obj) {
@@ -234,7 +234,7 @@ var Gtris = Gtris || (function() {
 
     /* ========================================================================
      * Gtris: tab v1.1.0
-     * http://static.gabia.com/gtris/tab.html
+     * http://static.gabia.com/gtris/1.1.0/tab.html
      * ========================================================================
      */
     var Tab = function(obj) {
@@ -285,7 +285,7 @@ var Gtris = Gtris || (function() {
 
     /* ========================================================================
      * Gtris: tooltip v1.1.0
-     * http://static.gabia.com/gtris/tooltip.html
+     * http://static.gabia.com/gtris/1.1.0/tooltip.html
      * ========================================================================
      */
     var Tooltip = function(obj) {
@@ -397,7 +397,7 @@ var Gtris = Gtris || (function() {
 
     /* ========================================================================
      * Gtris: layer v1.1.0
-     * http://static.gabia.com/gtris/layer.html
+     * http://static.gabia.com/gtris/1.1.0/layer.html
      * ========================================================================
      */
     var Layer = function(obj) {
@@ -460,7 +460,7 @@ var Gtris = Gtris || (function() {
 
     /* ========================================================================
      * Gtris: dropdown v1.1.0
-     * http://static.gabia.com/gtris/dropdown.html
+     * http://static.gabia.com/gtris/1.1.0/dropdown.html
      * ========================================================================
      */
     var Dropdown = function(obj) {
