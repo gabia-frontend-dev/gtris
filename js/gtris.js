@@ -1,5 +1,5 @@
 // Gtris v1.1.0
-// by @gabia frontend
+// by @gabia frontend team
 if (typeof jQuery === 'undefined') {
     throw new Error('gtirs requires jQuery');
 }
