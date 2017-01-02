@@ -116,16 +116,18 @@ table { border-collapse: collapse; border-spacing: 0; }
 .gt-chk-item .gt-chkbox, .gt-chk-item .gt-radio, .gt-chk-item .gt-label { cursor: pointer; vertical-align: middle; }
 .gt-chk-item .gt-chkbox:not(.crossbrowsing) { position: absolute; top: 0; left: 0; border: 0 none; opacity: .01; }
 .gt-chk-item .gt-chkbox:not(.crossbrowsing):disabled { cursor: not-allowed; }
-.gt-chk-item .gt-chkbox:not(.crossbrowsing) + .gt-label { min-height: 20px; padding-left: 25px; display: inline-block; background: url("../images/spr-chkfrm.png") 0 0 no-repeat; background-position: 0 0; }
+.gt-chk-item .gt-chkbox:not(.crossbrowsing) + .gt-label { min-height: 20px; padding-left: 25px; display: inline-block; background: url("/images/spr-chkfrm.png") 0 0 no-repeat; background-position: 0 0; }
 .gt-chk-item .gt-chkbox:not(.crossbrowsing):focus + .gt-label, .gt-chk-item .gt-chkbox:not(.crossbrowsing):hover + .gt-label, .gt-chk-item .gt-chkbox:not(.crossbrowsing) + .gt-label:hover { background-position: 0 -72px; }
 .gt-chk-item .gt-chkbox:not(.crossbrowsing):checked + .gt-label { background-position: 0 -24px; }
 .gt-chk-item .gt-chkbox:not(.crossbrowsing):disabled + .gt-label { background-position: 0 -48px; cursor: not-allowed; }
+.gt-chk-item .gt-chkbox:not(.crossbrowsing):disabled:checked + .gt-label { background-position: 0 -96px; cursor: not-allowed; }
 .gt-chk-item .gt-radio:not(.crossbrowsing) { position: absolute; top: 0; left: 0; border: 0 none; opacity: .01; }
 .gt-chk-item .gt-radio:not(.crossbrowsing):disabled { cursor: not-allowed; }
-.gt-chk-item .gt-radio:not(.crossbrowsing) + .gt-label { min-height: 20px; padding-left: 25px; display: inline-block; background: url("../images/spr-chkfrm.png") 0 0 no-repeat; background-position: 0 -96px; }
-.gt-chk-item .gt-radio:not(.crossbrowsing):focus + .gt-label, .gt-chk-item .gt-radio:not(.crossbrowsing):hover + .gt-label, .gt-chk-item .gt-radio:not(.crossbrowsing) + .gt-label:hover { background-position: 0 -174px; }
-.gt-chk-item .gt-radio:not(.crossbrowsing):checked + .gt-label { background-position: 0 -122px; }
-.gt-chk-item .gt-radio:not(.crossbrowsing):disabled + .gt-label { background-position: 0 -148px; cursor: not-allowed; }
+.gt-chk-item .gt-radio:not(.crossbrowsing) + .gt-label { min-height: 20px; padding-left: 25px; display: inline-block; background: url("/images/spr-chkfrm.png") 0 0 no-repeat; background-position: 0 -120px; }
+.gt-chk-item .gt-radio:not(.crossbrowsing):focus + .gt-label, .gt-chk-item .gt-radio:not(.crossbrowsing):hover + .gt-label, .gt-chk-item .gt-radio:not(.crossbrowsing) + .gt-label:hover { background-position: 0 -198px; }
+.gt-chk-item .gt-radio:not(.crossbrowsing):checked + .gt-label { background-position: 0 -146px; }
+.gt-chk-item .gt-radio:not(.crossbrowsing):disabled + .gt-label { background-position: 0 -172px; cursor: not-allowed; }
+.gt-chk-item .gt-radio:not(.crossbrowsing):disabled:checked + .gt-label { background-position: 0 -224px; cursor: not-allowed; }
 
 /*textbox*/
 .gt-textbox { border-radius: 1px; padding: 0 0 0 12px; height: 22px; line-height: 22px; border: 1px solid #b7b7b7; background-color: #fff; }
@@ -137,10 +139,10 @@ table { border-collapse: collapse; border-spacing: 0; }
 .gt-textbox.gt-multiline { padding: 10px; min-width: 376px; max-width: 376px; min-height: 100px; overflow: auto; line-height: 1.5; }
 
 /*select*/
-.gt-select { padding: 0 0 0 12px; height: 24px; line-height: 24px; border: 1px solid #b7b7b7; min-width: 120px; border-radius: 1px; appearance: none; -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; background: #fff url("../images/select_bg.png") right center/18px 28px no-repeat; }
+.gt-select { padding: 0 0 0 12px; height: 24px; line-height: 24px; border: 1px solid #b7b7b7; min-width: 120px; border-radius: 1px; appearance: none; -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; background: #fff url("images/select_bg.png") right center/18px 28px no-repeat; }
 .gt-select::-ms-expand { display: none; }
 .gt-select option { padding: 0 0 0 12px; }
 .gt-select:focus { border-color: #3073ce; }
-.gt-select:disabled { background-color: #fff; border-color: #e1e1e1; color: #a6a6a6; cursor: not-allowed; background: #fff url("../images/select_bg_disabled.png") right center/18px 28px no-repeat; }
+.gt-select:disabled { background-color: #fff; border-color: #e1e1e1; color: #a6a6a6; cursor: not-allowed; background: #fff url("images/select_bg_disabled.png") right center/18px 28px no-repeat; }
 
 /* shame */

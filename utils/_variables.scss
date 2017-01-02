@@ -118,22 +118,19 @@ $progress-striped-bgSize: 40px 40px !default;
 $progress-border-radius: 4px !default;
 
 // Checkbox, Radio
-
 $chkform-label-minHeight: 20px !default;
-
-$chkform-lineHeight: 20px !default;
 $chkform-label-paddingLeft: 25px !default;
-$chkform-bg-url: '../images/spr-chkfrm.png' !default;
-
+$chkform-bg-url: '/images/spr-chkfrm.png' !default;
 $chkbox-bgPosition: 0 0 !default;
 $chkbox-checked-bgPosition: 0 -24px !default;
 $chkbox-disabled-bgPosition: 0 -48px !default;
 $chkbox-focus-bgPosition: 0 -72px !default;
-
-$radio-bgPosition: 0 -96px !default;
-$radio-checked-bgPosition: 0 -122px !default;
-$radio-disabled-bgPosition: 0 -148px !default;
-$radio-focus-bgPosition: 0 -174px !default;
+$chkbox-checkedDisabled-bgPosition: 0 -96px !default;
+$radio-bgPosition: 0 -120px !default;
+$radio-checked-bgPosition: 0 -146px !default;
+$radio-disabled-bgPosition: 0 -172px !default;
+$radio-focus-bgPosition: 0 -198px !default;
+$radio-checkedDisabled-bgPosition: 0 -224px !default;
 
 // Textbox
 $textbox-borderRadius: 1px !default;
@@ -157,8 +154,8 @@ $textbox-multiline-maxWidth: 376px !default;
 $textbox-multiline-minHeight: 100px !default;
 
 // Select
-$select-bgDefault-url: '../images/select_bg.png' !default;
-$select-bgDisabled-url: '../images/select_bg_disabled.png' !default;
+$select-bgDefault-url: 'images/select_bg.png' !default;
+$select-bgDisabled-url: 'images/select_bg_disabled.png' !default;
 $select-bgColor: #fff !default;
 $select-bgW: 18px !default;
 $select-bgH: 28px !default;

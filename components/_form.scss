@@ -35,6 +35,10 @@
 				background-position:$chkbox-disabled-bgPosition;
 				cursor: not-allowed;
 			}
+			&:disabled:checked + .gt-label {
+				background-position:$chkbox-checkedDisabled-bgPosition;
+				cursor: not-allowed;
+			}
 		}
 	}
 	.gt-radio {
@@ -61,6 +65,10 @@
 			}
 			&:disabled + .gt-label {
 				background-position:$radio-disabled-bgPosition;
+				cursor: not-allowed;
+			}
+			&:disabled:checked + .gt-label {
+				background-position:$radio-checkedDisabled-bgPosition;
 				cursor: not-allowed;
 			}
 		}
@@ -124,7 +132,6 @@
 	-ms-appearance:none;
 	&::-ms-expand {display:none;}
 	background:$select-bgColor url($select-bgDefault-url) right center/$select-bgW $select-bgH no-repeat;
-//	@include selectBackground($select-bgDefault-url, $select-bgW, $select-bgH, $select-bgColor);
 	option {
 		padding:$select-padding;
 	}
@@ -137,6 +144,5 @@
 		color:$select-disabled-fontColor;
 		cursor: not-allowed;
 		background:$select-bgColor url($select-bgDisabled-url) right center/$select-bgW $select-bgH no-repeat;
-//		@include selectBackground($select-bgDisabled-url, $select-bgW, $select-bgH, $select-bgColor);
 	}
 }
