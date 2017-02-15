@@ -88,7 +88,7 @@ var Gtris = Gtris || (function() {
             //append overlay, modal
             $overlay.appendTo(gtModalWrapArr[gtModalWrapArr.length - 1]);
             $target.appendTo(gtModalWrapArr[gtModalWrapArr.length - 1]);
-
+            
             //add event
             if(_overlayClose) $overlay.on('click', hideModal);
             $target.find('[data-modal="hide"]').on('click', hideModal);
@@ -167,11 +167,12 @@ var Gtris = Gtris || (function() {
         }
 
         //hide modal window
-        function hideModal() {
+        function hideModal(_obj) {
             var lastModalIdx = gtModalWrapArr.length - 1;
             gtModalWrapArr[lastModalIdx].remove();
             gtModalWrapArr.pop();
             //return closed function
+            console.log(_obj);
             if(_obj.closed) return _obj.closed();
         };
 
@@ -376,7 +377,7 @@ var Gtris = Gtris || (function() {
                 TweenMax.fromTo($this_cnt, 0.3, {opacity:1}, {opacity:0, display:'none'});
             }
         }
-
+        
         switch(event_trigger) {
             case 'click':
             event_trigger = 'click';
@@ -466,7 +467,6 @@ var Gtris = Gtris || (function() {
      * ========================================================================
      */
     var Dropdown = function(obj) {
-
         var $dd = $(obj.target);
 
         //toggle dd
