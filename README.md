@@ -1,7 +1,5 @@
 # gtris
 
-##### front-end framework for developing projects on the web
-
 gtris는 가비아 프론트엔드개발팀에서 제작한 CSS 기반의 UI Framework 입니다.
 CSS 전문가와 비전문가 누구나 몇가지 규칙을 숙지하기만 하면 자유롭게 웹표준 기반 마크업을 개발할 수 있도록 돕는 것이 목적이며,
 이미지 기반이 아닌 CSS 기반의 스타일링을 가지므로 개발자 입장에서 보다 손쉬운 유지관리가 가능합니다.
