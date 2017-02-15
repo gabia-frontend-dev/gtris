@@ -1,0 +1,11 @@
+{
+    "globals": {
+        "$": false,
+        "TweenMax": false,
+        "Power2": false,
+        "console": false,
+        "eqeqeq": true
+    },
+    "undef": true,
+    "browser" : true
+}
