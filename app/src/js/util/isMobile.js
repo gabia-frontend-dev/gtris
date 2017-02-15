@@ -13,6 +13,6 @@
 		return detectStr.test(ua);
     };
 
-    gtris.util.isMobile = isMobile;
+    gtris.util.isMobile = isMobile();
 
 })(window.gtris);

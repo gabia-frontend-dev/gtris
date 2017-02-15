@@ -47,6 +47,6 @@
         return {name: n, version: v};
     };
 
-    gtris.util.browser = browser;
+    gtris.util.browser = browser();
 
 })(window.gtris);

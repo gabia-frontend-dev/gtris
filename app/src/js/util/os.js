@@ -69,6 +69,6 @@
 		return {name: n, version: v};
 	};
 
-	gtris.util.os = os;
+	gtris.util.os = os();
 
 })(window.gtris);

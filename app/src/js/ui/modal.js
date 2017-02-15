@@ -171,7 +171,7 @@
 					break;
 
 					case 'center': //[left,center]
-					$target.css('left', '0%');
+					$target.css({ left: '0', top: '50%'});
 					$target.css('marginTop', th);
 					break;
 
@@ -188,10 +188,14 @@
 					$target.css('marginLeft', tw);
 					break;
 
-					case 'center': //[center,cener]
+					case 'center': //[center,center]
 					$target.css({ left: '50%', top: '50%' });
 					$target.css('marginLeft', tw);
-					$target.css('transform', 'translateY(-49%)');
+					if(gtris.util.browser.name === 'ie') {
+						$target.css('marginTop', th);
+					}else{
+						$target.css('transform', 'translateY(-50%)');
+					}
 					break;
 
 					case 'bottom': //[center,bottom]
@@ -207,7 +211,7 @@
 					$target.css({ right: '0', left: 'auto', top: '0' });
 					break;
 
-					case 'center': //[right,cener]
+					case 'center': //[right,center]
 					$target.css({ right: '0', left: 'auto', top: '50%'});
 					$target.css('marginTop', th);
 					break;
