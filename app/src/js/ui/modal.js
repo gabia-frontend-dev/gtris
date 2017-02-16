@@ -31,7 +31,7 @@
 			if(_escKey === undefined) {
 				this.escKeyArr.push(true);
 			}else{
-				this.escKeyArr.push(_obj.escKey);	
+				this.escKeyArr.push(_obj.escKey);
 			}
 
 			this.options = {
