@@ -13,6 +13,7 @@
 		"gulp-sourcemaps": "^2.4.0",
 		"gulp-uglify": "^2.0.0",
 		"jshint": "^2.9.4",
-		"jshint-stylish": "^2.2.1"
+		"jshint-stylish": "^2.2.1",
+		"local-web-server": "^1.2.6"
 	}
 }
