@@ -1,11 +1,11 @@
 (function(gtris) {
-    'use strict';
-    if (!gtris) {
-        gtris = window.gtris = {};
-    }
-    if (!gtris.util) {
-        gtris.util = window.gtris.util = {};
-    }
+	'use strict';
+	if (!gtris) {
+		gtris = window.gtris = {};
+	}
+	if (!gtris.util) {
+		gtris.util = window.gtris.util = {};
+	}
 	
 	var setCookie = function(cname, cvalue, exdays) {
 		var d = new Date();
