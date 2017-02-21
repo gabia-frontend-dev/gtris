@@ -26,7 +26,7 @@
 			//set option
 			if(_position === undefined) _position = ['center','center'];
 			if(_overlayOpacity === undefined) _overlayOpacity = 0.8;
-			if(_overlayColor === undefined) _overlayColor = '#000';
+			if(_overlayColor === undefined) _overlayColor = '#000000';
 			if(_overlayClose === undefined) _overlayClose = false;
 			if(_escKey === undefined) {
 				this.escKeyArr.push(true);
