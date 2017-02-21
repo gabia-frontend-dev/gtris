@@ -75,6 +75,7 @@
 
 		ajaxCall: function(_obj) {
 			$.ajax({
+				context: this,
 				url: _obj.target,
 					error : function(xhr, status, error) {
 					//console.log('ajax error');
@@ -86,7 +87,7 @@
 					var $target = $(response);
 					$target.css('opacity', '0');
 					//show modal
-					modal.showModal(_obj, $target);
+					this.showModal(_obj, $target);
 				},
 				complete: function() {
 					//setPosition();
