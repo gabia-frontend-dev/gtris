@@ -138,6 +138,7 @@
 				});
 			}
 
+			//esckey
 			$(document).unbind('keyup').bind('keyup', function(e) {
 				var evt = e || window.event;
 				if (evt.keyCode == 27) {
@@ -147,12 +148,17 @@
 					}
 				}
 			});
+
+			//add overflow hidden
+			$('body').addClass('gt-overflow-hidden');
 		},
 
 		hideModal: function(_obj) {
 			var lastModalIdx = modal.wrapperArr.length - 1;
 			modal.wrapperArr[lastModalIdx].remove();
 			modal.wrapperArr.pop();
+			//remove overflow hidden
+			$('body').removeClass('gt-overflow-hidden');
 			//return closed function
 			if(_obj.closed) return _obj.closed();
 		},
