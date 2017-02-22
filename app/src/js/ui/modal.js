@@ -197,11 +197,11 @@
 
 					case 'center': //[center,center]
 					$target.css({ left: '50%', top: '50%' });
-					$target.css('marginLeft', tw);
 					if(gtris.util.browser.name === 'ie') {
+						$target.css('marginLeft', tw);
 						$target.css('marginTop', th);
 					}else{
-						$target.css('transform', 'translateY(-50%)');
+						$target.css('transform', 'translate(-50%, -50%)');
 					}
 					break;
 
