@@ -8,9 +8,9 @@
 
 	//gt-scaleout
 	.gt-scaleout {
-		width: 40px;
-		height: 40px;
-		background-color: #333;
+		width: $scaleout-size;
+		height: $scaleout-size;
+		background-color: $scaleout-color;
 		border-radius: 100%;
 		-webkit-animation: gt-sk-scaleout 1.0s infinite ease-in-out;
 		animation: gt-sk-scaleout 1.0s infinite ease-in-out;
@@ -35,17 +35,16 @@
 
 	//double-bounce
 	.gt-double-bounce {
-		width: 40px;
-		height: 40px;
+		width: $double-bounce-size;
+		height: $double-bounce-size;
 		position: relative;
-		margin: 100px auto;
 	}
 
 	.gt-double-bounce1, .gt-double-bounce2 {
 		width: 100%;
 		height: 100%;
 		border-radius: 50%;
-		background-color: #333;
+		background-color: $double-bounce-color;
 		opacity: 0.6;
 		position: absolute;
 		top: 0;
@@ -76,9 +75,9 @@
 
 	//gt-rotateplane
 	.gt-rotateplane {
-		width: 40px;
-		height: 40px;
-		background-color: #333;
+		width: $rotateplane-size;
+		height: $rotateplane-size;
+		background-color: $rotateplane-color;
 		-webkit-animation: gt-sk-rotateplane 1.2s infinite ease-in-out;
 		animation: gt-sk-rotateplane 1.2s infinite ease-in-out;
 	}
@@ -102,9 +101,9 @@
 	
 	//gt-bouncedelay
 	.gt-bouncedelay > div {
-		width: 18px;
-		height: 18px;
-		background-color: #333;
+		width: $bouncedelay-size;
+		height: $bouncedelay-size;
+		background-color: $bouncedelay-color;
 		border-radius: 100%;
 		display: inline-block;
 		-webkit-animation: gt-sk-bouncedelay 1.4s infinite ease-in-out both;
@@ -138,8 +137,8 @@
 
 	//folding
 	.gt-folding-cube {
-		width: 40px;
-		height: 40px;
+		width: $folding-cube-size;
+		height: $folding-cube-size;
 		position: relative;
 		-webkit-transform: rotateZ(45deg);
 		transform: rotateZ(45deg);
@@ -160,7 +159,7 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: #333;
+		background-color: $folding-cube-color;
 		-webkit-animation: gt-foldCubeAngle 2.4s infinite linear both;
 		animation: gt-foldCubeAngle 2.4s infinite linear both;
 		-webkit-transform-origin: 100% 100%;
