@@ -16,23 +16,23 @@
             tmp += _str.substr(0, 3);
             tmp += '-';
             tmp += _str.substr(3);
-            return tmp;
+			return tmp;
         }else if(_str.length < 11) {
             tmp += _str.substr(0, 3);
             tmp += '-';
             tmp += _str.substr(3, 3);
             tmp += '-';
             tmp += _str.substr(6);
-            return tmp;
+			return tmp;
         }else{
             tmp += _str.substr(0, 3);
             tmp += '-';
             tmp += _str.substr(3, 4);
             tmp += '-';
             tmp += _str.substr(7);
-            return tmp;
+			return tmp;
         }
-        return str;
+		return str;
     };
 
     gtris.util.autoDashPhoneNumber = autoDashPhoneNumber;
