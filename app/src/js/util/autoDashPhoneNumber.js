@@ -32,7 +32,7 @@
 			tmp += _str.substr(7);
 			return tmp;
 		}
-			return str;
+		return str;
 	};
 
 	gtris.util.autoDashPhoneNumber = autoDashPhoneNumber;
