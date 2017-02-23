@@ -221,4 +221,53 @@
 		}
 	}
 
+	//rectangle-bounce
+	.gt-rectangle-bounce {
+		height: $rectangle-bounce-height;
+	}
+
+	.gt-rectangle-bounce > div {
+		background-color: $rectangle-bounce-color;
+		height: 100%;
+		width: $rectangle-bounce-width;
+		display: inline-block;
+		-webkit-animation: gt-sk-stretchdelay 1.2s infinite ease-in-out;
+		animation: gt-sk-stretchdelay 1.2s infinite ease-in-out;
+	}
+
+	.gt-rectangle-bounce .gt-rect2 {
+		-webkit-animation-delay: -1.1s;
+		animation-delay: -1.1s;
+	}
+
+	.gt-rectangle-bounce .gt-rect3 {
+		-webkit-animation-delay: -1.0s;
+		animation-delay: -1.0s;
+	}
+
+	.gt-rectangle-bounce .gt-rect4 {
+		-webkit-animation-delay: -0.9s;
+		animation-delay: -0.9s;
+	}
+
+	.gt-rectangle-bounce .gt-rect5 {
+		-webkit-animation-delay: -0.8s;
+		animation-delay: -0.8s;
+	}
+
+	@-webkit-keyframes gt-sk-stretchdelay {
+		0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+		20% { -webkit-transform: scaleY(1.0) }
+	}
+
+	@keyframes gt-sk-stretchdelay {
+		0%, 40%, 100% { 
+			transform: scaleY(0.4);
+			-webkit-transform: scaleY(0.4);
+		}  20% { 
+			transform: scaleY(1.0);
+			-webkit-transform: scaleY(1.0);
+		}
+	}
+
 }
