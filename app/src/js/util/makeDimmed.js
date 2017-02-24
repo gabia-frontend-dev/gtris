@@ -17,7 +17,7 @@
 		dimmed.style.height = '100%';
 
 		if(className === undefined) {
-			className = 'gtrisUtilMakeDimmed';
+			className = 'gtrisDimmed';
 		}else{
 			className = className;
 		}
