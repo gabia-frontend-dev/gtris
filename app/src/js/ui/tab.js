@@ -1,48 +1,52 @@
 (function(gtris) {
-    'use strict';
-    if (!gtris) {
-        gtris = window.gtris = {};
-    }
-    if (!gtris.ui) {
-        gtris.ui = window.gtris.ui = {};
-    }
+	'use strict';
+	if (!gtris) {
+		gtris = window.gtris = {};
+	}
+	if (!gtris.ui) {
+		gtris.ui = window.gtris.ui = {};
+	}
 
-    var tab = {
+	var tab = {
+		init: function(obj) {
+			var _obj = obj;
+			var $target = $(_obj.target);
 
-        init: function(obj) {
+			if(!_obj.event) {
+				_obj.event = 'click';
+			}
+			else if(_obj.event == 'mouseover') {
+				_obj.event += ' focus';
+			}
 
-            var _obj = obj;
-            var $target = $(_obj.target);
-            if(!_obj.event) _obj.event = 'click';
-            
-            $target.each(function() {
+			$target.each(function() {
+				var $tab_head = $(this);
+				var target_id = [];
 
-                var $tab_head = $(this); //<ul class="gt-tab-nav">
-                var target_id = [];
-
-                $tab_head.find('[data-id]').each(function() {
-
-                    var $tab_nav = $(this); //<a href="javascript:void(0);">Tab1</a>
-                    var this_id = "#" + $(this).attr('data-id');
-
-                    //event handler
-                    function eventHandler(event) {
-                        event.preventDefault();
-                        $tab_head.find("li.gt-active").removeClass("gt-active");
-                        $(event.target).parents("li").addClass("gt-active");
-                        $(target_id.join(", ")).hide();
-                        $(this_id).show();
-                    }
-                    target_id.push(this_id);
-
-                    //add event
-                    $tab_nav.on(_obj.event, eventHandler);
-                });
-            });
-        }
-
-    };
-
-    gtris.ui.tab = tab;
+				$tab_head.find('[data-id]').each(function() {
+					var $tab_nav = $(this);
+					var this_id = "#" + $(this).attr('data-id');
+					target_id.push(this_id);
+					$tab_nav.on(_obj.event, function() {
+						tab.attatchTabEvent.call(this, $tab_head, target_id, this_id);
+					});
+				});
+			});
+			
+		},
+		attatchTabEvent: function($tab_head, target_id, this_id) {
+			if(event.preventDefault) {
+				event.preventDefault();
+			}else {
+				event.returnValue = false;
+			}
+			
+			$tab_head.find("li.gt-active").removeClass("gt-active");
+			$(this).parents("li").addClass("gt-active");
+			$(target_id.join(", ")).hide();
+			$(this_id).show();
+		}
+	};
+	gtris.ui.tab = tab;
 
 })(window.gtris);
