@@ -41,9 +41,9 @@
 				}
 			}).done(function(response) {
 				$(this_id).empty().append(response);
-				alert('success');
+				window.alert('success');
 			}).fail(function(xmlRequest,textStatus,httpCode) {
-				alert('데이터를 가져오는 데 실패하였습니다.');
+				window.alert('failed.');
 			});
 		},		
 		attatchTabEvent: function($tab_head, target_id, this_id) {
