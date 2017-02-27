@@ -32,13 +32,30 @@
 					});
 				});
 			});
-			
 		},
+		ajaxCall: function(this_id) {
+			$.ajax({
+				url: this.href,
+				beforeSend : function() {
+					$(this_id).empty().append('<img src="https://static.gabia.com/gtris/assets/images/gt-loader.gif">');
+				}
+			}).done(function(response) {
+				$(this_id).empty().append(response);
+				alert('success');
+			}).fail(function(xmlRequest,textStatus,httpCode) {
+				alert('데이터를 가져오는 데 실패하였습니다.');
+			});
+		},		
 		attatchTabEvent: function($tab_head, target_id, this_id) {
 			if(event.preventDefault) {
 				event.preventDefault();
 			}else {
 				event.returnValue = false;
+			}
+			
+			var isUrl = (/(http(s)?:\/)?(\/\w+)+(\.[\w.]+)?/g).test(this.href);
+			if(isUrl) {
+				tab.ajaxCall.call(this, this_id);
 			}
 			
 			$tab_head.find("li.gt-active").removeClass("gt-active");
