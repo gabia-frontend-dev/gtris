@@ -6,7 +6,6 @@
 	if (!gtris.ui) {
 		gtris.ui = window.gtris.ui = {};
 	}
-
 	var tab = {
 		init: function(obj) {
 			var _obj = obj;
@@ -27,8 +26,8 @@
 					var $tab_nav = $(this);
 					var this_id = "#" + $(this).attr('data-id');
 					target_id.push(this_id);
-					$tab_nav.on(_obj.event, function() {
-						tab.attatchTabEvent.call(this, $tab_head, target_id, this_id);
+					$tab_nav.on(_obj.event, function(event) {
+						tab.attatchTabEvent.call(this, event, $tab_head, target_id, this_id);
 					});
 				});
 			});
@@ -41,12 +40,12 @@
 				}
 			}).done(function(response) {
 				$(this_id).empty().append(response);
-				window.alert('success');
-			}).fail(function(xmlRequest,textStatus,httpCode) {
-				window.alert('failed.');
+			}).fail(function(jqXHR, textStatus, errorThrown) {
+				window.alert('데이터를 가져오는 데 실패했습니다.');
+				$(this_id).empty().append('jqXHR: ' + jqXHR + ', textStatus: ' + textStatus + ', errorThrown: ' + errorThrown);
 			});
-		},		
-		attatchTabEvent: function($tab_head, target_id, this_id) {
+		},
+		attatchTabEvent: function(event, $tab_head, target_id, this_id) {
 			if(event.preventDefault) {
 				event.preventDefault();
 			}else {
