@@ -26,15 +26,15 @@
 					var $tab_nav = $(this);
 					var this_id = "#" + $(this).attr('data-id');
 					target_id.push(this_id);
-					$tab_nav.on(_obj.event, function(event) {
-						tab.attatchTabEvent.call(this, event, $tab_head, target_id, this_id);
+					$tab_nav.on(_obj.event, function() {
+						tab.attatchTabEvent.call(this, $tab_head, target_id, this_id);
 					});
 				});
 			});
 		},
 		ajaxCall: function(this_id) {
 			$.ajax({
-				url: this.href,
+				url: $(this).attr('data-url'),
 				beforeSend : function() {
 					$(this_id).empty().append('<img src="https://static.gabia.com/gtris/assets/images/gt-loader.gif">');
 				}
@@ -45,14 +45,8 @@
 				$(this_id).empty().append('jqXHR: ' + jqXHR + ', textStatus: ' + textStatus + ', errorThrown: ' + errorThrown);
 			});
 		},
-		attatchTabEvent: function(event, $tab_head, target_id, this_id) {
-			if(event.preventDefault) {
-				event.preventDefault();
-			}else {
-				event.returnValue = false;
-			}
-			
-			if((/(http(s)?:\/)?(\/\w+)+(\.[\w.]+)?/g).test(this.href)) {
+		attatchTabEvent: function($tab_head, target_id, this_id) {			
+			if((/(http(s)?:\/)?(\/\w+)+(\.[\w.]+)?/g).test($(this).attr('data-url'))) {
 				tab.ajaxCall.call(this, this_id);
 			}
 			
