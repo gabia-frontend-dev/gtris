@@ -52,8 +52,7 @@
 				event.returnValue = false;
 			}
 			
-			var isUrl = (/(http(s)?:\/)?(\/\w+)+(\.[\w.]+)?/g).test(this.href);
-			if(isUrl) {
+			if((/(http(s)?:\/)?(\/\w+)+(\.[\w.]+)?/g).test(this.href)) {
 				tab.ajaxCall.call(this, this_id);
 			}
 			
