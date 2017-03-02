@@ -6,7 +6,6 @@
 	if (!gtris.ui) {
 		gtris.ui = window.gtris.ui = {};
 	}
-
 	var tab = {
 		init: function(obj) {
 			var _obj = obj;
@@ -35,33 +34,21 @@
 		},
 		ajaxCall: function(this_id) {
 			$.ajax({
-				url: this.href,
+				url: $(this).attr('data-url'),
 				beforeSend : function() {
 					$(this_id).empty().append('<img src="https://static.gabia.com/gtris/assets/images/gt-loader.gif">');
 				}
 			}).done(function(response) {
 				$(this_id).empty().append(response);
-				//window.alert('success');
-			}).fail(function(xmlRequest,textStatus,httpCode) {
-				window.alert('failed.');
+			}).fail(function(jqXHR, textStatus, errorThrown) {
+				window.alert('데이터를 가져오는 데 실패했습니다.');
+				$(this_id).empty().append('jqXHR: ' + jqXHR + ', textStatus: ' + textStatus + ', errorThrown: ' + errorThrown);
 			});
-		},		
-		attatchTabEvent: function($tab_head, target_id, this_id) {
-			if(event.preventDefault) {
-				event.preventDefault();
-			}else {
-				event.returnValue = false;
-			}
-			
-			var isUrl = (/(http(s)?:\/)?(\/\w+)+(\.[\w.]+)?/g).test(this.href);
-			if(isUrl) {
+		},
+		attatchTabEvent: function($tab_head, target_id, this_id) {			
+			if((/(http(s)?:\/)?(\/\w+)+(\.[\w.]+)?/g).test($(this).attr('data-url'))) {
 				tab.ajaxCall.call(this, this_id);
 			}
-			
-			$tab_head.find("li.gt-active").removeClass("gt-active");
-			$(this).parents("li").addClass("gt-active");
-			$(target_id.join(", ")).hide();
-			$(this_id).show();
 		}
 	};
 	gtris.ui.tab = tab;
