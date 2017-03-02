@@ -41,7 +41,7 @@
 				}
 			}).done(function(response) {
 				$(this_id).empty().append(response);
-				window.alert('success');
+				//window.alert('success');
 			}).fail(function(xmlRequest,textStatus,httpCode) {
 				window.alert('failed.');
 			});

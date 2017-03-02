@@ -3,7 +3,9 @@
 
 //base
 @import 'base/reset';
-@import 'base/global';
+
+//grid
+@import 'components/grid';
 
 //components
 @import 'components/button';
@@ -18,4 +20,7 @@
 @import 'components/form';
 @import 'components/dropdown';
 @import 'components/loader';
-@import 'components/shame';
+@import 'components/helper';
+
+//themes
+@import 'components/navbar';

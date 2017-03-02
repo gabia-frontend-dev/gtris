@@ -1,0 +1,79 @@
+/* navbar */
+.gt-navbar {
+	position: relative;
+	min-height: 50px;
+	margin-bottom: 20px;
+	background-color: #f8f8f8;
+	border-bottom: 1px solid #e7e7e7;
+
+	.gt-navbar-header {
+		position: relative;
+		padding: 0 15px;
+		@include clearfix();
+	}
+
+	.gt-navbar-project-name {
+		display: inline-block;
+		float: left;
+		padding: 10px 15px 13px 15px;
+		margin-left: -15px;
+		font-size: 18px;
+		color: #555;
+		font-weight:bold;
+	}
+
+	.gt-navbar-nav {
+		float: left;
+		@include clearfix();
+
+		&.gt-navbar-nav-right {
+			float: right;
+		}
+
+		> li {
+			float: left;
+		}
+
+		> li > a {
+			display: block;
+			padding: 16px 15px;
+			color: #555;
+			font-weight: bold;
+
+			&:hover {
+				color: #2985db;
+			}
+		}
+
+		> li.gt-active > a {
+			background-color: #e7e7e7;
+			color: #2985db;
+		}	
+	}
+
+	//color-inverse
+	&.gt-navbar-inverse {
+		background-color: #222;
+		border-color: #080808;
+
+		.gt-navbar-project-name {
+			color: #fff;
+		}
+
+		.gt-navbar-nav {
+			> li > a {
+				color: #9d9d9d;
+
+				&:hover {
+					color: #fff;
+				}
+			}
+
+			> li.gt-active > a {
+				background-color: #080808;
+				color: #fff;
+			}
+		}
+	}
+
+}

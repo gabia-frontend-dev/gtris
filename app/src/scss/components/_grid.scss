@@ -1,0 +1,24 @@
+/* gtris-grid */
+.gt-rwd-container {
+	margin: 0 auto;
+	padding: 0 15px;
+	@include clearfix();
+}
+
+@media (min-width: $screen-sm-min) {
+	.gt-rwd-container {
+		width: $container-sm;
+	}
+}
+
+@media (min-width: $screen-md-min) {
+	.gt-rwd-container {
+		width: $container-md;
+	}
+}
+
+@media (min-width: $screen-lg-min) {
+	.gt-rwd-container {
+		width: $container-lg;
+	}
+}
