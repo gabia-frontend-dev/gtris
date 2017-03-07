@@ -35,10 +35,6 @@
 				background-position:$chkbox-disabled-bgPosition;
 				cursor: not-allowed;
 			}
-			&:disabled:checked + .gt-label {
-				background-position:$chkbox-checkedDisabled-bgPosition;
-				cursor: not-allowed;
-			}
 		}
 	}
 	.gt-radio {
@@ -67,10 +63,6 @@
 				background-position:$radio-disabled-bgPosition;
 				cursor: not-allowed;
 			}
-			&:disabled:checked + .gt-label {
-				background-position:$radio-checkedDisabled-bgPosition;
-				cursor: not-allowed;
-			}
 		}
 	}
 }
@@ -81,11 +73,10 @@
 	padding:$textbox-padding;
 	height:$textbox-height;
 	line-height:$textbox-lineHeight;
-	border:1px solid $textbox-borderColor;
+	border:$textbox-borderWidth solid $textbox-borderColor;
 	background-color:$textbox-bgColor;
 	&:focus {
 		border-color:$textbox-focus-borderColor;
-		background-color:$textbox-focus-bgColor;
 	}
 	&:read-only {
 		border-color:$textbox-readonly-borderColor;
@@ -120,29 +111,19 @@
 
 /*select*/
 .gt-select {
-	padding:$select-padding;
 	height:$select-height;
 	line-height:$select-lineHeight;
-	border:1px solid $select-borderColor;
-	min-width: 120px;
+	border:$select-borderWidth solid $select-borderColor;
 	border-radius:$select-borderRadius;
-	appearance:none;
-	-webkit-appearance:none;
-	-moz-appearance:none;
-	-ms-appearance:none;
-	&::-ms-expand {display:none;}
-	background:$select-bgColor url($select-bgDefault-url) right center/$select-bgW $select-bgH no-repeat;
-	option {
-		padding:$select-padding;
-	}
+	background-color:$select-bgColor;
+	color:$select-fontColor;
 	&:focus {
 		border-color:$select-focus-borderColor;
 	}
 	&:disabled {
-		background-color:$select-disabled-bgColor;
 		border-color:$select-disabled-borderColor;
+		background-color:$select-disabled-bgColor;
 		color:$select-disabled-fontColor;
 		cursor: not-allowed;
-		background:$select-bgColor url($select-bgDisabled-url) right center/$select-bgW $select-bgH no-repeat;
 	}
 }
