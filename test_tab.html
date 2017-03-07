@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<script type="text/javascript" src="http://static.gabia.com/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="app/dist/css/gtris.css">
+<script type="text/javascript" src="app/dist/js/gtris.js"></script>
+<!--<script type="text/javascript" src="app/src/js/ui/tab.js"></script>-->
+</head>
+<body>
+
+
+	<h1>ajax call</h1>
+	<div class="gt-tab" style="margin:50px 0 0">
+		<ul class="gt-tab-nav" data-ui="gt-tab">
+			<li class="gt-active"><a href="javascript:void(0);" data-id="tab1" data-url="/tab1.html">Tab1</a></li>
+			<li><a href="javascript:void(0);" data-id="tab2" data-url="/tab2.html">Tab2</a></li>
+		</ul>
+		<div id="tab1">내용1</div>
+		<div id="tab2" class="gt-hide"><strong>내용 2</strong></div>
+	</div>	
+	<hr style="margin:100px 0;">
+	
+	<h1>common</h1>
+	<div class="gt-tab" style="margin:50px 0 0">
+		<ul class="gt-tab-nav" data-ui="gt-tab">
+			<li class="gt-active"><a href="javascript:void(0);" data-id="tab3">Tab3</a></li>
+			<li><a href="javascript:void(0);" data-id="tab4">Tab4</a></li>
+		</ul>
+		<div id="tab3">내용 3</div>
+		<div id="tab4" class="gt-hide"><strong>내용 4</strong></div>
+	</div>	
+	<hr style="margin:100px 0;">
+	
+
+
+
+<script type="text/javascript">
+	
+	gtris.ui.tab.init({
+		target: $('[data-ui="gt-tab"]'),
+		event: 'mouseover'
+	});
+</script>
+
+
+
+
+
+</body>
+</html>
