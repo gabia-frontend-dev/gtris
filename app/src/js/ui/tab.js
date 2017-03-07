@@ -49,6 +49,11 @@
 			if((/(http(s)?:\/)?(\/\w+)+(\.[\w.]+)?/g).test($(this).attr('data-url'))) {
 				tab.ajaxCall.call(this, this_id);
 			}
+			
+			$tab_head.find("li.gt-active").removeClass("gt-active");
+			$(this).parents("li").addClass("gt-active");
+			$(target_id.join(", ")).hide();
+			$(this_id).show();
 		}
 	};
 	gtris.ui.tab = tab;
