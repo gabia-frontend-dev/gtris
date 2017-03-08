@@ -4,48 +4,66 @@
 	margin-bottom: 20px;
 	background-color: #eee;
 
+	.gt-hamburger {
+		display: block;
+		top: 7px;
+		right: 20px;
+	}
+
+	&.gt-active .gt-navbar-header .gt-navbar-nav {
+		display: block;
+	}
+
 	.gt-navbar-header {
 		position: relative;
-		padding: 0 15px;
-		@include clearfix();
-	}
-
-	.gt-navbar-project-name {
-		display: inline-block;
-		float: left;
-		padding: 14px 15px 15px 15px;
-		margin-left: -15px;
-		font-size: 18px;
-		color: #555;
-		font-weight:bold;
-	}
-
-	.gt-navbar-nav {
-		float: left;
 		@include clearfix();
 
-		&.gt-navbar-nav-right {
-			float: right;
-		}
-
-		> li {
+		.gt-navbar-project-name {
+			display: inline-block;
 			float: left;
+			padding: 15px;
+			margin-left: -15px;
+			font-size: 18px;
+			color: #555;
+			font-weight:bold;
 		}
 
-		> li > a {
-			display: block;
-			padding: 19px 15px;
-			color: #555;
-			font-weight: bold;
+		.gt-navbar-nav {
+			float: left;
+			@include clearfix();
 
-			&:hover {
+			&.gt-navbar-nav-right {
+				float: none;
+
+				> li:last-child > a {
+					padding-right: 0;
+				}
+			}
+
+			> li {
+				float: left;
+			}
+
+			> li > a {
+				display: block;
+				padding: 18px 15px;
+				font-size: 14px;
+				color: #555;
+				font-weight: bold;
+
+				&:hover {
+					color: #2985db;
+				}
+			}
+
+			> li.gt-active > a {
 				color: #2985db;
 			}
-		}
 
-		> li.gt-active > a {
-			color: #2985db;
-		}	
+			&.gt-navbar-nav-right {
+				float: right;
+			}
+		}
 	}
 
 	&.gt-navbar-fixed {
@@ -57,13 +75,14 @@
 	//color-inverse
 	&.gt-navbar-inverse {
 		background-color: #292929;
-		border-color: #080808;
 
 		.gt-navbar-project-name {
 			color: #fff;
 		}
 
 		.gt-navbar-nav {
+			float: left;
+
 			> li > a {
 				color: #9d9d9d;
 
@@ -77,5 +96,4 @@
 			}
 		}
 	}
-
 }
