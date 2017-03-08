@@ -108,7 +108,7 @@
 			var $overlay = $(gtris.util.makeDimmed('gt-overlay', 0, this.options.overlayColor));
 
 			//showing overlay
-			TweenMax.to($overlay, 0.5, {opacity:this.options.overlayOpacity, ease:Power2.easeOut, onComplete: overlayOpenCompleted});
+			TweenMax.to($overlay, 0.3, {opacity:this.options.overlayOpacity, ease:Power2.easeOut, onComplete: overlayOpenCompleted});
 
 			//showing modal
 			function overlayOpenCompleted() {
@@ -117,7 +117,9 @@
 
 			//completed event return
 			function modalOpenCompleted() {
-				if(_obj.completed) return _obj.completed();
+				if(_obj.completed) {
+					return _obj.completed($target);
+				}
 			}
 
 			//append overlay, modal
