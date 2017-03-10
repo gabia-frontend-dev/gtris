@@ -12,14 +12,16 @@
 			this.attachTabEvent(_obj);		
 		},
 		getParam: function(paramName) {
-			var idx = gtris.util.getParameterByName(paramName);
-			idx = idx ? idx : 0;
-			return idx;
+			var val = gtris.util.getParameterByName(paramName);
+			return val;
 		},
 		attachTabEvent: function(_obj) {			
 			var $target = $(_obj.target);
-			var idx = this.getParam('idx');
-
+			var idx = Number(this.getParam('idx'));
+			if(idx < 0 || idx > _obj.target.length-1 || window.isNaN(idx)) {
+				idx = 0;
+			}
+			
 			if(!_obj.event) {
 				_obj.event = 'click';
 			}
@@ -35,7 +37,7 @@
 					$tab_nav.on(_obj.event, function() {
 						tab.excuteTabEvent.call(this, $tab_head, $(this).parent('li').index());
 					});
-				});				
+				});
 				$tab_head.find('li').eq(idx).find('[data-id]').trigger(_obj.event);
 			});
 		},
