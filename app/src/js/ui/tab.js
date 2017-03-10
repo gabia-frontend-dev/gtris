@@ -10,27 +10,29 @@
 		init: function(obj) {
 			var _obj = obj;
 			var $target = $(_obj.target);
-
-			if(!_obj.event) {
-				_obj.event = 'click';
-			}
-			else if(_obj.event == 'mouseover') {
-				_obj.event += ' focus';
-			}
-
+			var idx = this.getParam('idx');
+			_obj.event = this.attachTabEvent(_obj.event);
+			
 			$target.each(function() {
 				var $tab_head = $(this);
-				var target_id = [];
+				$tab_head.target_id = [];
 
 				$tab_head.find('[data-id]').each(function() {
 					var $tab_nav = $(this);
 					var this_id = "#" + $(this).attr('data-id');
-					target_id.push(this_id);
+					$tab_head.target_id.push(this_id);
 					$tab_nav.on(_obj.event, function() {
-						tab.attatchTabEvent.call(this, $tab_head, target_id, this_id);
+						tab.excuteTabEvent.call(this, $tab_head, $(this).parent('li').index());
 					});
 				});
+				$tab_head.find('li').eq(idx).find('[data-id]').trigger(_obj.event);
 			});
+			
+		},
+		getParam: function(paramName) {
+			var idx = gtris.util.getParameterByName(paramName);
+			idx = idx ? idx : 0;
+			return idx;
 		},
 		ajaxCall: function(this_id) {
 			$.ajax({
@@ -45,14 +47,24 @@
 				$(this_id).empty().append('jqXHR: ' + jqXHR + ', textStatus: ' + textStatus + ', errorThrown: ' + errorThrown);
 			});
 		},
-		attatchTabEvent: function($tab_head, target_id, this_id) {			
+		attachTabEvent: function(e) {
+			if(!e) {
+				e = 'click';
+			}
+			else if(e == 'mouseover') {
+				e += ' focus';
+			}		
+			return e;
+		},
+		excuteTabEvent: function($tab_head, idx) {			
+			var this_id = "#" + $(this).attr('data-id');
 			if((/(http(s)?:\/)?(\/\w+)+(\.[\w.]+)?/g).test($(this).attr('data-url'))) {
 				tab.ajaxCall.call(this, this_id);
 			}
 			
 			$tab_head.find("li.gt-active").removeClass("gt-active");
-			$(this).parents("li").addClass("gt-active");
-			$(target_id.join(", ")).hide();
+			$tab_head.find("li").eq(idx).addClass("gt-active");
+			$($tab_head.target_id.join(", ")).hide();			
 			$(this_id).show();
 		}
 	};
