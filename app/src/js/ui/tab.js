@@ -9,9 +9,23 @@
 	var tab = {
 		init: function(obj) {
 			var _obj = obj;
+			this.attachTabEvent(_obj);		
+		},
+		getParam: function(paramName) {
+			var idx = gtris.util.getParameterByName(paramName);
+			idx = idx ? idx : 0;
+			return idx;
+		},
+		attachTabEvent: function(_obj) {			
 			var $target = $(_obj.target);
 			var idx = this.getParam('idx');
-			_obj.event = this.attachTabEvent(_obj.event);
+
+			if(!_obj.event) {
+				_obj.event = 'click';
+			}
+			else if(!_obj.event == 'mouseover') {
+				_obj.event += ' focus';
+			}
 			
 			$target.each(function() {
 				var $tab_head = $(this);
@@ -24,43 +38,28 @@
 					$tab_nav.on(_obj.event, function() {
 						tab.excuteTabEvent.call(this, $tab_head, $(this).parent('li').index());
 					});
-				});
+				});				
 				$tab_head.find('li').eq(idx).find('[data-id]').trigger(_obj.event);
 			});
-			
-		},
-		getParam: function(paramName) {
-			var idx = gtris.util.getParameterByName(paramName);
-			idx = idx ? idx : 0;
-			return idx;
 		},
 		ajaxCall: function(this_id) {
 			$.ajax({
 				url: $(this).attr('data-url'),
 				beforeSend : function() {
-					$(this_id).empty().append('<img src="https://static.gabia.com/gtris/assets/images/gt-loader.gif">');
+					$(this_id).empty().append('<div style="text-align:center;padding:10px 0;"><img src="https://static.gabia.com/gtris/assets/images/gt-loader.gif"></div>');
 				}
 			}).done(function(response) {
 				$(this_id).empty().append(response);
 			}).fail(function(jqXHR, textStatus, errorThrown) {
-				window.alert('데이터를 가져오는 데 실패했습니다.');
+				window.alert('load failed.');
 				$(this_id).empty().append('jqXHR: ' + jqXHR + ', textStatus: ' + textStatus + ', errorThrown: ' + errorThrown);
 			});
 		},
-		attachTabEvent: function(e) {
-			if(!e) {
-				e = 'click';
-			}
-			else if(e == 'mouseover') {
-				e += ' focus';
-			}		
-			return e;
-		},
 		excuteTabEvent: function($tab_head, idx) {			
-			var this_id = "#" + $(this).attr('data-id');
+			var this_id = "#" + $(this).attr('data-id');			
 			if((/(http(s)?:\/)?(\/\w+)+(\.[\w.]+)?/g).test($(this).attr('data-url'))) {
 				tab.ajaxCall.call(this, this_id);
-			}
+			}			
 			
 			$tab_head.find("li.gt-active").removeClass("gt-active");
 			$tab_head.find("li").eq(idx).addClass("gt-active");
