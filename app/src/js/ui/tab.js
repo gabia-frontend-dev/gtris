@@ -23,9 +23,6 @@
 			if(!_obj.event) {
 				_obj.event = 'click';
 			}
-			else if(!_obj.event == 'mouseover') {
-				_obj.event += ' focus';
-			}
 			
 			$target.each(function() {
 				var $tab_head = $(this);
