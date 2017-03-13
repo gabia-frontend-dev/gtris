@@ -35,7 +35,7 @@
 					var this_id = "#" + $(this).attr('data-id');
 					$tab_head.target_id.push(this_id);
 					$tab_nav.on(_obj.event, function() {
-						tab.excuteTabEvent.call(this, $tab_head, $(this).parent('li').index());
+						tab.executeTabEvent.call(this, $tab_head, $(this).parent('li').index());
 					});
 				});
 				$tab_head.find('li').eq(idx).find('[data-id]').trigger(_obj.event);
@@ -54,7 +54,7 @@
 				$(this_id).empty().append('jqXHR: ' + jqXHR + ', textStatus: ' + textStatus + ', errorThrown: ' + errorThrown);
 			});
 		},
-		excuteTabEvent: function($tab_head, idx) {			
+		executeTabEvent: function($tab_head, idx) {			
 			var this_id = "#" + $(this).attr('data-id');			
 			if((/(http(s)?:\/)?(\/\w+)+(\.[\w.]+)?/g).test($(this).attr('data-url'))) {
 				tab.ajaxCall.call(this, this_id);
