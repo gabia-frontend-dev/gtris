@@ -113,6 +113,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 /*checkbox, radio*/
 .gt-chk-item { display: inline-block; position: relative; margin: 0 15px 0 0; }
+
 .gt-chk-item .gt-chkbox, .gt-chk-item .gt-radio, .gt-chk-item .gt-label { cursor: pointer; vertical-align: middle; }
 .gt-chk-item .gt-chkbox:not(.crossbrowsing) { position: absolute; top: 0; left: 0; border: 0 none; opacity: .01; }
 .gt-chk-item .gt-chkbox:not(.crossbrowsing):disabled { cursor: not-allowed; }
@@ -138,11 +139,14 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 /*select*/
 .gt-select { height: 24px; line-height: 24px; border: 1px solid #b7b7b7; border-radius: 1px; background-color: #fff; color: #333; }
+
 .gt-select:focus { border-color: #3073ce; }
+
 .gt-select:disabled { border-color: #eaeeef; background-color: #f8fafb; color: #aaa; cursor: not-allowed; }
 
 /* gtris-dropdown */
 .gt-dropdown { position: relative; }
+
 .gt-dropdown .gt-dd-button { background: #2985db; color: #fff; padding: 16px 26px; font-size: 14px; }
 .gt-dropdown .gt-dd-button:hover, .gt-dropdown .gt-dd-button:focus { background: #1061ad; }
 .gt-dropdown.gt-active .gt-dd-menu { display: block; }
@@ -154,6 +158,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 /* gtris-loader */
 .gtrisLoader { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2000; }
+
 .gtrisLoader .gt-scaleout { width: 40px; height: 40px; background-color: #333; border-radius: 100%; -webkit-animation: gt-sk-scaleout 1.0s infinite ease-in-out; animation: gt-sk-scaleout 1.0s infinite ease-in-out; }
 @-webkit-keyframes gt-sk-scaleout { 0% { -webkit-transform: scale(0); }
   100% { -webkit-transform: scale(1); opacity: 0; } }
