@@ -162,7 +162,15 @@
 			//remove overflow hidden
 			$('body').removeClass('gt-overflow-hidden');
 			//return closed function
-			if(_obj.closed) return _obj.closed();
+			if(_obj && _obj.closed) return _obj.closed();
+		},
+
+		closeModal: function() {
+			
+		},
+
+		closeModalAll: function() {
+			
 		},
 
 		setPosition: function($target) {

@@ -6,3 +6,63 @@
 	box-sizing: border-box;
 	@include clearfix();
 }
+
+.gt-row {
+	margin-left: auto;
+	margin-right: auto;
+
+	.gt-col-1 {
+	  width: 8.3333333333%;
+	}
+
+	.gt-col-2 {
+	  width: 16.6666666667%;
+	}
+
+	.gt-col-3 {
+	  width: 25%;
+	}
+
+	.gt-col-4 {
+	  width: 33.3333333333%;
+	}
+
+	.gt-col-5 {
+	  width: 41.6666666667%;
+	}
+
+	.gt-col-6 {
+	  width: 50%;
+	}
+
+	.gt-col-7 {
+	  width: 58.3333333333%;
+	}
+
+	.gt-col-8 {
+	  width: 66.6666666667%;
+	}
+
+	.gt-col-9 {
+	  width: 75%;
+	}
+
+	.gt-col-10 {
+	  width: 83.3333333333%;
+	}
+
+	.gt-col-11 {
+	  width: 91.6666666667%;
+	}
+
+	.gt-col-12 {
+	  width: 100%;
+	}
+
+	.gt-col-1, .gt-col-2, .gt-col-3, .gt-col-4, .gt-col-5, .gt-col-6, .gt-col-7, .gt-col-8, .gt-col-9, .gt-col-10, .gt-col-11, .gt-col-12 {
+		float: left;
+		box-sizing: border-box;
+	}
+
+	@include clearfix();
+}
