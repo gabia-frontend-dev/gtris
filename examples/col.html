@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Grid Template for gtris</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://static.gabia.com/www/common/img/favicon.ico">
+<link rel="stylesheet" href="https://static.gabia.com/gtris/1.1.0/css/gtris.css">
+<style type="text/css">
+
+ .browser-window {
+ 	text-align: left;
+ 	width: 100%;
+ 	height: auto;
+ 	display: inline-block;
+ 	border-radius: 5px 5px 2px 2px;
+ 	background-color: #fff;
+ 	margin: 20px 0px;overflow:hidden
+ }
+ .browser-window .top-bar {
+ 	height:30px;
+ 	border-radius:5px 5px 0 0;
+ 	border-top:thin solid #eaeae9;
+ 	border-bottom:thin solid #dfdfde;
+ 	background:linear-gradient(#e7e7e6, #E2E2E1)
+ }
+ .browser-window .circle {
+ 	height:10px;
+ 	width:10px;
+ 	display:inline-block;
+ 	border-radius:50%;
+ 	background-color:#fff;
+ 	margin-right:1px
+ }
+ #close-circle {background-color:#FF5C5A}
+ #minimize-circle {background-color:#FFBB50}
+ #maximize-circle {background-color:#1BC656}
+ .browser-window .circles {margin:5px 12px}
+ .browser-window .content {
+ 	margin:0;
+ 	width:100%;
+ 	display:inline-block;
+ 	border-radius:0 0 5px 5px;
+ 	background-color:#fafafa
+ }
+
+ #site-layout-example-left{background-color:#90a4ae;height:300px}
+ #site-layout-example-right{background-color:#26a69a;height:300px}
+ #site-layout-example-top{background-color:#E57373;height:42px}
+ .flat-text-header{
+ 	height:35px;
+ 	width:80%;
+ 	background-color:rgba(255,255,255,0.15);
+ 	display:block;margin:27px auto
+ }
+ .flat-text {
+ 	height:25px;
+ 	width:80%;
+ 	background-color:rgba(0,0,0,0.15);
+ 	display:block;margin:27px auto
+ }
+
+
+
+.grid-example {
+    border: 1px solid #eee;
+    text-align: center;
+    line-height: 50px;
+    font-size: 28px;
+    background-color: tomato;
+    color: white;
+    padding: 0;
+}
+
+</style>
+
+</head>
+
+
+<body style="padding-top: 200px">
+
+	<div class="gt-row">
+		<div class="gt-col-1 grid-example">1</div>
+		<div class="gt-col-1 grid-example">2</div>
+		<div class="gt-col-1 grid-example">3</div>
+		<div class="gt-col-1 grid-example">4</div>
+		<div class="gt-col-1 grid-example">5</div>
+		<div class="gt-col-1 grid-example">6</div>
+		<div class="gt-col-1 grid-example">7</div>
+		<div class="gt-col-1 grid-example">8</div>
+		<div class="gt-col-1 grid-example">9</div>
+		<div class="gt-col-1 grid-example">10</div>
+		<div class="gt-col-1 grid-example">11</div>
+		<div class="gt-col-1 grid-example">12</div>
+	</div>
+
+	<!-- <h1>반응형 아님</h1>
+	<h2>1단</h2>
+	<div class="gt-row" style="color: #fff; text-align: center;">
+		<div class="gt-col-12 grid-example">gt-col-12</div>
+	</div>
+	<br>
+
+	<h2>2단</h2>
+	<div class="gt-row" style="color: #fff; text-align: center;">
+		<div class="gt-col-6 grid-example">gt-col-6</div>
+		<div class="gt-col-6 grid-example">gt-col-6</div>
+	</div>
+	<br>
+
+	<h2>3단</h2>
+	<div class="gt-row" style="color: #fff; text-align: center;">
+		<div class="gt-col-4 grid-example">gt-col-4</div>
+		<div class="gt-col-4 grid-example">gt-col-4</div>
+		<div class="gt-col-4 grid-example">gt-col-4</div>
+	</div>
+	<br>
+
+	<h2>4단</h2>
+	<div class="gt-row" style="color: #fff; text-align: center;">
+		<div class="gt-col-3 grid-example">gt-col-3</div>
+		<div class="gt-col-3 grid-example">gt-col-3</div>
+		<div class="gt-col-3 grid-example">gt-col-3</div>
+		<div class="gt-col-3 grid-example">gt-col-3</div>
+	</div>
+	<br>
+
+	<h2>5단</h2>
+	<div class="gt-row" style="color: #fff; text-align: center;">
+		<div class="gt-col-15 grid-example">gt-col-15</div>
+		<div class="gt-col-15 grid-example">gt-col-15</div>
+		<div class="gt-col-15 grid-example">gt-col-15</div>
+		<div class="gt-col-15 grid-example">gt-col-15</div>
+		<div class="gt-col-15 grid-example">gt-col-15</div>
+	</div>
+	<br>
+
+	<h2>6단</h2>
+	<div class="gt-row" style="color: #fff; text-align: center;">
+		<div class="gt-col-2 grid-example">gt-col-2</div>
+		<div class="gt-col-2 grid-example">gt-col-2</div>
+		<div class="gt-col-2 grid-example">gt-col-2</div>
+		<div class="gt-col-2 grid-example">gt-col-2</div>
+		<div class="gt-col-2 grid-example">gt-col-2</div>
+		<div class="gt-col-2 grid-example">gt-col-2</div>
+	</div>
+	<br>
+
+	<h2>1 : 11</h2>
+	<div class="gt-row" style="color: #fff; text-align: center;">
+		<div class="gt-col-1" style="border-right:10px solid #fff">gt-col-1</div>
+		<div class="gt-col-11">gt-col-11</div>
+	</div>
+	<br>
+
+	<h2>2 : 10</h2>
+	<div class="gt-row" style="color: #fff; text-align: center;">
+		<div class="gt-col-2" style="border-right:10px solid #fff">gt-col-2</div>
+		<div class="gt-col-10">gt-col-10</div>
+	</div>
+	<br>
+
+	<h2>3 : 9</h2>
+	<div class="gt-row" style="color: #fff; text-align: center;">
+		<div class="gt-col-3" style="border-right:10px solid #fff">gt-col-3</div>
+		<div class="gt-col-9">gt-col-9</div>
+	</div>
+	<br>
+
+	<h2>4 : 8</h2>
+	<div class="gt-row" style="color: #fff; text-align: center;">
+		<div class="gt-col-4" style="border-right:10px solid #fff">gt-col-4</div>
+		<div class="gt-col-8">gt-col-8</div>
+	</div>
+	<br>
+
+	<h2>5 : 7</h2>
+	<div class="gt-row" style="color: #fff; text-align: center;">
+		<div class="gt-col-5" style="border-right:10px solid #fff">gt-col-5</div>
+		<div class="gt-col-7">gt-col-7</div>
+	</div>
+	<br>
+
+
+
+	<br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+	<h1>반응형</h1>
+	<h2>6단 > 3단 > 2단 1단</h2>
+	<div class="gt-row" style="color: #fff; text-align: center;">
+		<div class="gt-xl-2 gt-l-4 gt-m-6 gt-s-12">gt-xl-2 gt-l-4 gt-m-6 gt-s-12</div>
+		<div class="gt-xl-2 gt-l-4 gt-m-6 gt-s-12">gt-xl-2 gt-l-4 gt-m-6 gt-s-12</div>
+		<div class="gt-xl-2 gt-l-4 gt-m-6 gt-s-12">gt-xl-2 gt-l-4 gt-m-6 gt-s-12</div>
+		<div class="gt-xl-2 gt-l-4 gt-m-6 gt-s-12">gt-xl-2 gt-l-4 gt-m-6 gt-s-12</div>
+		<div class="gt-xl-2 gt-l-4 gt-m-6 gt-s-12">gt-xl-2 gt-l-4 gt-m-6 gt-s-12</div>
+		<div class="gt-xl-2 gt-l-4 gt-m-6 gt-s-12">gt-xl-2 gt-l-4 gt-m-6 gt-s-12</div>
+	</div>
+	<br><br><br><br><br><br><br><br><br><br><br><br> -->
+
+<!-- 
+	<div class="gt-row" style="color: #fff; text-align: center;">
+		<div style="background:#0082cc;" class="gt-xl-15 gt-m-4 gt-s-12">1</div>
+		<div style="background:#0082cc;" class="gt-xl-15 gt-m-4 gt-s-12">2</div>
+		<div style="background:#0082cc;" class="gt-xl-15 gt-m-4 gt-s-12">3</div>
+		<div style="background:#0082cc;" class="gt-xl-15 gt-m-4 gt-s-12">4</div>
+		<div style="background:#0082cc;" class="gt-xl-15 gt-m-4 gt-s-12">5</div>
+	</div> -->
+
+
+
+
+<!-- <div class="gt-row" style="max-width:1500px; margin: 0 auto">
+
+	<div class="browser-window">
+		<div class="top-bar">
+			<div class="circles">
+				<div id="close-circle" class="circle"></div>
+				<div id="minimize-circle" class="circle"></div>
+				<div id="maximize-circle" class="circle"></div>
+			</div>
+		</div>
+		
+		<div class="content">
+			<div class="gt-row">
+				<div id="site-layout-example-top" class="gt-col-12"></div>
+				<div id="site-layout-example-left" class="gt-col-3">
+					<p class="flat-text-header"></p>
+					<p class="flat-text"></p>
+					<p class="flat-text"></p>
+				</div>
+				
+				<div id="site-layout-example-right" class="gt-col-9">
+					<p class="flat-text"></p>
+					<p class="flat-text"></p>
+					<p class="flat-text"></p>
+					<p class="flat-text"></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="gt-row" style="max-width:1500px; margin: 0 auto">
+
+	<div class="browser-window">
+		<div class="top-bar">
+			<div class="circles">
+				<div id="close-circle" class="circle"></div>
+				<div id="minimize-circle" class="circle"></div>
+				<div id="maximize-circle" class="circle"></div>
+			</div>
+		</div>
+		
+		<div class="content">
+			<div class="gt-row">
+				<div id="site-layout-example-top" class="gt-s-12"></div>
+				<div id="site-layout-example-left" class="gt-s-12 gt-m-6 gt-l-4 gt-xl-3">
+					<p class="flat-text-header"></p>
+					<p class="flat-text"></p>
+					<p class="flat-text"></p>
+				</div>
+				
+				<div id="site-layout-example-right" class="gt-s-12 gt-m-6 gt-l-8 gt-xl-9">
+					<p class="flat-text"></p>
+					<p class="flat-text"></p>
+					<p class="flat-text"></p>
+					<p class="flat-text"></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div> -->
+
+
+
+
+
+
+
+
+
+</body>
+</html>

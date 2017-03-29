@@ -186,9 +186,7 @@ $fading-circle-size: 40px !default;
 $fading-circle-color: #333 !default;
 
 //RWD
-$screen-sm-min: 768px !default;
-$screen-md-min: 991px !default;
-$screen-lg-min: 1200px !default;
-$container-sm: 750px !default;
-$container-md: 970px !default;
-$container-lg: 1170px !default;
+$screen-s-min: 600px !default;
+$screen-m-min: 600px !default;
+$screen-l-min: 992px !default;
+$screen-xl-min: 1200px !default;

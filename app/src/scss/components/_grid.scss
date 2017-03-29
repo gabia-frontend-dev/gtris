@@ -8,61 +8,248 @@
 }
 
 .gt-row {
-	margin-left: auto;
-	margin-right: auto;
-
 	.gt-col-1 {
-	  width: 8.3333333333%;
+		width: 8.3333333333%;
 	}
-
 	.gt-col-2 {
 	  width: 16.6666666667%;
 	}
-
 	.gt-col-3 {
 	  width: 25%;
 	}
-
 	.gt-col-4 {
 	  width: 33.3333333333%;
 	}
-
 	.gt-col-5 {
 	  width: 41.6666666667%;
 	}
-
 	.gt-col-6 {
 	  width: 50%;
 	}
-
 	.gt-col-7 {
 	  width: 58.3333333333%;
 	}
-
 	.gt-col-8 {
 	  width: 66.6666666667%;
 	}
-
 	.gt-col-9 {
 	  width: 75%;
 	}
-
 	.gt-col-10 {
 	  width: 83.3333333333%;
 	}
-
 	.gt-col-11 {
 	  width: 91.6666666667%;
 	}
-
 	.gt-col-12 {
 	  width: 100%;
 	}
-
-	.gt-col-1, .gt-col-2, .gt-col-3, .gt-col-4, .gt-col-5, .gt-col-6, .gt-col-7, .gt-col-8, .gt-col-9, .gt-col-10, .gt-col-11, .gt-col-12 {
+	.gt-col-15 {
+	  width: 20%;
+	}
+	.gt-col-1, .gt-col-2, .gt-col-3, .gt-col-4, .gt-col-5, .gt-col-6, .gt-col-7, .gt-col-8, .gt-col-9, .gt-col-10, .gt-col-11, .gt-col-12, .gt-col-15 {
 		float: left;
 		box-sizing: border-box;
 	}
-
 	@include clearfix();
+}
+
+/* Small Devices */
+@media only screen and (max-width: $screen-s-min) {
+	.gt-row {
+		.gt-s-1 {
+			width: 8.3333333333%;
+		}
+		.gt-s-2 {
+			width: 16.6666666667%;
+		}
+		.gt-s-3 {
+			width: 25%;
+		}
+		.gt-s-4 {
+			width: 33.3333333333%;
+		}
+		.gt-s-5 {
+			width: 41.6666666667%;
+		}
+		.gt-s-6 {
+			width: 50%;
+		}
+		.gt-s-7 {
+			width: 58.3333333333%;
+		}
+		.gt-s-8 {
+			width: 66.6666666667%;
+		}
+		.gt-s-9 {
+			width: 75%;
+		}
+		.gt-s-10 {
+			width: 83.3333333333%;
+		}
+		.gt-s-11 {
+			width: 91.6666666667%;
+		}
+		.gt-s-12 {
+			width: 100%;
+		}
+		.gt-s-15 {
+			width: 20%;
+		}
+		.gt-s-1, .gt-s-2, .gt-s-3, .gt-s-4, .gt-s-5, .gt-s-6, .gt-s-7, .gt-s-8, .gt-s-9, .gt-s-10, .gt-s-11, .gt-s-12, .gt-s-15 {
+			float: left;
+			box-sizing: border-box;
+		}
+		@include clearfix();
+	}
+}
+
+/* Middle Device */
+@media screen and (min-width: $screen-m-min) {
+	.gt-row {
+		.gt-m-1 {
+			width: 8.3333333333%;
+		}
+		.gt-m-2 {
+			width: 16.6666666667%;
+		}
+		.gt-m-3 {
+			width: 25%;
+		}
+		.gt-m-4 {
+			width: 33.3333333333%;
+		}
+		.gt-m-5 {
+			width: 41.6666666667%;
+		}
+		.gt-m-6 {
+			width: 50%;
+		}
+		.gt-m-7 {
+			width: 58.3333333333%;
+		}
+		.gt-m-8 {
+			width: 66.6666666667%;
+		}
+		.gt-m-9 {
+			width: 75%;
+		}
+		.gt-m-10 {
+			width: 83.3333333333%;
+		}
+		.gt-m-11 {
+			width: 91.6666666667%;
+		}
+		.gt-m-12 {
+			width: 100%;
+		}
+		.gt-m-15 {
+			width: 20%;
+		}
+		.gt-m-1, .gt-m-2, .gt-m-3, .gt-m-4, .gt-m-5, .gt-m-6, .gt-m-7, .gt-m-8, .gt-m-9, .gt-m-10, .gt-m-11, .gt-m-12, .gt-m-15 {
+			float: left;
+			box-sizing: border-box;
+		}
+		@include clearfix();
+	}
+}
+
+/* Large Devices */
+@media screen and (min-width: $screen-l-min) {
+	.gt-row {
+		.gt-l-1 {
+			width: 8.3333333333%;
+		}
+		.gt-l-2 {
+			width: 16.6666666667%;
+		}
+		.gt-l-3 {
+			width: 25%;
+		}
+		.gt-l-4 {
+			width: 33.3333333333%;
+		}
+		.gt-l-5 {
+			width: 41.6666666667%;
+		}
+		.gt-l-6 {
+			width: 50%;
+		}
+		.gt-l-7 {
+			width: 58.3333333333%;
+		}
+		.gt-l-8 {
+			width: 66.6666666667%;
+		}
+		.gt-l-9 {
+			width: 75%;
+		}
+		.gt-l-10 {
+			width: 83.3333333333%;
+		}
+		.gt-l-11 {
+			width: 91.6666666667%;
+		}
+		.gt-l-12 {
+			width: 100%;
+		}
+		.gt-l-15 {
+			width: 20%;
+		}
+		.gt-l-1, .gt-l-2, .gt-l-3, .gt-l-4, .gt-l-5, .gt-l-6, .gt-l-7, .gt-l-8, .gt-l-9, .gt-l-10, .gt-l-11, .gt-l-12, .gt-l-15 {
+			float: left;
+			box-sizing: border-box;
+		}
+		@include clearfix();
+	}
+}
+
+/* XLarge Devices */
+@media screen and (min-width: $screen-xl-min) {
+	.gt-row {
+		.gt-xl-1 {
+			width: 8.3333333333%;
+		}
+		.gt-xl-2 {
+			width: 16.6666666667%;
+		}
+		.gt-xl-3 {
+			width: 25%;
+		}
+		.gt-xl-4 {
+			width: 33.3333333333%;
+		}
+		.gt-xl-5 {
+			width: 41.6666666667%;
+		}
+		.gt-xl-6 {
+			width: 50%;
+		}
+		.gt-xl-7 {
+			width: 58.3333333333%;
+		}
+		.gt-xl-8 {
+			width: 66.6666666667%;
+		}
+		.gt-xl-9 {
+			width: 75%;
+		}
+		.gt-xl-10 {
+			width: 83.3333333333%;
+		}
+		.gt-xl-11 {
+			width: 91.6666666667%;
+		}
+		.gt-xl-12 {
+			width: 100%;
+		}
+		.gt-xl-15 {
+			width: 20%;
+		}
+		.gt-xl-1, .gt-xl-2, .gt-xl-3, .gt-xl-4, .gt-xl-5, .gt-xl-6, .gt-xl-7, .gt-xl-8, .gt-xl-9, .gt-xl-10, .gt-xl-11, .gt-xl-12, .gt-xl-15 {
+			float: left;
+			box-sizing: border-box;
+		}
+		@include clearfix();
+	}
 }

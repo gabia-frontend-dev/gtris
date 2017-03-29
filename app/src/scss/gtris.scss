@@ -4,9 +4,6 @@
 //base
 @import 'base/reset';
 
-//grid
-@import 'components/grid';
-
 //components
 @import 'components/button';
 @import 'components/table';
@@ -19,9 +16,9 @@
 @import 'components/layer';
 @import 'components/form';
 @import 'components/dropdown';
-@import 'components/loader';
 @import 'components/hamburger';
 @import 'components/helper';
+@import 'components/grid';
 
 //themes
 @import 'components/navbar';

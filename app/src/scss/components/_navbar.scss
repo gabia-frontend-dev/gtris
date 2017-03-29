@@ -5,18 +5,11 @@
 	background-color: #eee;
 	z-index: 1100;
 
-	.gt-hamburger {
-		display: block;
-		top: 7px;
-		right: 20px;
-	}
-
 	&.gt-active .gt-navbar-header .gt-navbar-nav {
 		display: block;
 	}
 
 	.gt-navbar-header {
-		position: relative;
 		@include clearfix();
 
 		.gt-navbar-project-name {
